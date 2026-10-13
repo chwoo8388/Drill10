@@ -40,7 +40,7 @@ class Ball21:
 
     def update(self):
         self.frame = (self.frame + 1) % 2
-        self.y -= 5
+        self.y -= (self.x % 7) + 3
         if self.y < 60:
             self.y = 60
     def draw(self):
@@ -55,9 +55,12 @@ class Ball41:
 
     def update(self):
         self.frame = (self.frame + 1) % 2
-        self.y -= 8
+        self.y -= (self.x % 7) + 4
+        #random.radint(4,8) 이거 왜 안되지
+        #변수 = random도 안되네
         if self.y < 60:
             self.y = 60
+        # 잔디 위 y=60으로 맞춤
     
     def draw(self):
             self.image.clip_draw(self.frame * 100, 0, 41, 41, self.x, self.y)
