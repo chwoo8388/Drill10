@@ -37,7 +37,11 @@ class Ball:
         self.frame = 0
         self.image = load_image('ball21x21.png')
 
-
+    def update(self):
+        self.frame = (self.frame + 1) % 8
+        self.y += 5
+        if self.y > 0:
+            self.y = 0
 
 
 def reset_world():
