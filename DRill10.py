@@ -55,7 +55,7 @@ class Ball41:
 
     def update(self):
         self.frame = (self.frame + 1) % 2
-        self.y -= 5
+        self.y -= 8
         if self.y < 60:
             self.y = 60
     
