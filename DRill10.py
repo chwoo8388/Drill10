@@ -63,6 +63,7 @@ class Ball41:
             self.image.clip_draw(self.frame * 100, 0, 41, 41, self.x, self.y)
 
 
+
 def reset_world():
     global running
     running = True
@@ -79,11 +80,10 @@ def reset_world():
     team = [Boy() for _ in range(11)]
     world.extend(team)
     ball21 = Ball21()
-    world.append(ball21)
+    world.extend(Ball21() for _ in range(10))
     ball41 = Ball41()
-    world.append(ball41)
+    world.extend(Ball41() for _ in range(10))
     
-
 
 def update_world():
     for o in world:
