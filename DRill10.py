@@ -70,7 +70,8 @@ def reset_world():
     global grass
     global team
     global world
-    global ball
+    global ball21
+    global ball41
 
     world = []
     grass = Grass()
@@ -79,8 +80,8 @@ def reset_world():
     world.extend(team)
     ball21 = Ball21()
     world.append(ball21)
-    # ball41 = [Ball41() for _ in range(10)]
-    # world.append(ball41)
+    ball41 = Ball41()
+    world.append(ball41)
     
 
 
